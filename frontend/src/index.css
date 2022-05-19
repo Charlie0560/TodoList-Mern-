@@ -1,0 +1,71 @@
+body{
+  background-image: url('/src/images/4K-1.gif');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position-x: center;
+  background-position-y: 90%;
+  background-color: black;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 2%;
+}
+.top a{
+  color: aqua;
+  font-size: 30px;
+  
+}
+a i{
+  transition: all .2s ease-in-out;
+}
+a i:hover{
+  transform:scale(1.1);
+}
+.hu__hu__ { animation: hu__hu__ infinite 2s ease-in-out }
+@keyframes hu__hu__ {
+  50% { transform: translateY(30px) }
+}
+.clock {
+  background: transparent;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+.clock-time,
+.clock-ampm {
+  font-family: "Concert One", cursive;
+  font-size: 30px;
+  color: aqua;
+}
+
+.clock-time {
+  font-size: 48px;
+}
+.mobilebg{
+  display: none;
+}
+@media (max-width:600px) {
+    body{
+        background-image: none;
+    }
+    .top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* padding-left: 50px; */
+    }
+    .mobilebg{
+        display:block;
+        width: 80%;
+        margin-top: 0%;
+    }
+    
+}

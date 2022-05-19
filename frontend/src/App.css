@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.App{
+  width: 20%;
+  float: right;
+  margin-right: 5%;
+  background-color: transparent;
+  margin-top: 5%;
+ 
+}
+.listsitems{
+  height: 60vh;
+  overflow-y: scroll;
+}
+.listsitems::-webkit-scrollbar{
+  display: none;
+}
+
+.todo__list{
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 100%;
+}
+.todo__list .listitem {
+  width: 50%;
+  background-color: blue;
+  float: left;
+}
+
+.todo__list > button{
+  /* margin-left: 70%; */
+}
+.items{
+  display: flex;
+  flex-direction: row;
+  color: aqua;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.clock{
+  float: left;
+  width: 20%;
+  margin-top: 15%;
+  font-size: 50px;
+  font-family: 'Oswald', sans-serif;
+
+}
+@media (max-width: 600px) {
+  .application{
+    margin-top: 5%;
+  }
+  .App{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+  .listsitems{
+    height: 35vh;
+    overflow-y: scroll;
+  }
+  .clock{
+    font-size: 30px;
+    margin-top: 0%;
+    width: 100%;
+  }
+  
+}
