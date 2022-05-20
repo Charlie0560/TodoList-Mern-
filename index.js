@@ -4,10 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const todoRoute = require("./routes/Todo");
 
-
 app.use(express.json());
-
-
 
 dotenv.config();
 
@@ -21,7 +18,13 @@ try {
 
 app.use("/api/todos", todoRoute);
 
-app.listen(process.env.PORT || 5000, () => {
-    console.log("Backend is running!");
+if ((process.env.NODE_ENV = "production")) {
+  app.use(express.static("frontend/build"));
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
   });
-  
+}
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Backend is running!");
+});
